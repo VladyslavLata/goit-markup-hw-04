@@ -19,6 +19,9 @@
   --main-btn-background-color: #f5f4fa;
   --accent-btn-background-color: #2196f3;
   --secondary-accent-btn-background-color: #188ce8;
+  /* icon */
+  --main-icon-color: #afb1b8;
+  --secondary-icon-color: #ffffff;
 }
 h1,
 h2,
@@ -68,6 +71,19 @@ body {
   margin-bottom: 50px;
 }
 
+.social-network-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.social-network-icon {
+  width: 20px;
+  height: 20px;
+}
 /* -----------hiden title------------- */
 .hiden-title {
   position: absolute;
@@ -87,6 +103,7 @@ body {
 .accent-link:focus {
   color: var(--accent-text-color);
 }
+
 .btn {
   text-align: center;
   border: none;
@@ -155,7 +172,14 @@ body {
   display: flex;
   align-items: center;
 }
+.header-contacts-icon {
+  margin-right: 10px;
+  fill: currentColor;
+}
+
 .header-contacts-link {
+  display: flex;
+  align-items: center;
   color: var(--first-text-color);
 }
 .current-link {
@@ -212,30 +236,16 @@ body {
 .advantage-item:not(:last-child) {
   margin-right: 30px;
 }
-.advantage-item::before {
-  content: '';
-  display: block;
-  margin-bottom: 30px;
-  width: 270px;
+.advantage-pic {
+  display: flex;
   height: 120px;
-  border-radius: 4px;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
   background-color: var(--section-background-color);
-  background-repeat: no-repeat;
-  background-size: 70px 70px;
-  background-position: center;
+  border-radius: 4px;
 }
-.advantage-item.icon-antenna::before {
-  background-image: url('../images/antenna.svg');
-}
-.advantage-item.icon-clock::before {
-  background-image: url('../images/clock.svg');
-}
-.advantage-item.icon-diagrama::before {
-  background-image: url('../images/diagram.svg');
-}
-.advantage-item.icon-astronaut::before {
-  background-image: url('../images/astronaut.svg');
-}
+
 .advantage-title {
   margin-bottom: 10px;
   font-size: 14px;
@@ -303,10 +313,55 @@ body {
   font-weight: 500;
 }
 .team-position {
+  margin-bottom: 16px;
   color: var(--first-text-color);
 }
-/* -----------------clients-------------------- */
+.team-social-network-list {
+  display: flex;
+  justify-content: space-between;
+}
+.team-social-network-link {
+  color: var(--main-icon-color);
+}
+.team-social-network-icon {
+  fill: currentColor;
+}
 
+.team-social-network-link:hover,
+.team-social-network-link:focus {
+  color: var(--secondary-icon-color);
+  background-color: var(--accent-btn-background-color);
+}
+/* -----------------clients-------------------- */
+.clients-list {
+  display: flex;
+}
+.clients-item {
+  width: calc((100% - 5 * 30px) / 6);
+}
+.clients-item:not(:last-child) {
+  margin-right: 30px;
+}
+.clients-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 92px;
+  border: 1px solid var(--main-icon-color);
+  border-radius: 4px;
+  color: var(--main-icon-color);
+}
+.clients-icon {
+  width: 106px;
+  height: 60px;
+  fill: currentColor;
+}
+.clients-link:hover,
+.clients-link:focus {
+  color: var(--accent-btn-background-color);
+  border-color: var(--accent-btn-background-color);
+}
 /*----------------- PORTFOLIO----------------- */
 /* --------------------btn------------------- */
 .our-works-btn {
@@ -350,6 +405,15 @@ body {
   width: calc((100% - 3 * 30px) / 3);
   margin: 15px;
 }
+.our-works-link {
+  color: currentColor;
+  cursor: pointer;
+}
+.our-works-item:hover,
+.our-works-item:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+}
 .our-works-img {
   max-width: 100%;
   height: auto;
@@ -366,6 +430,7 @@ body {
   letter-spacing: 0.03em;
   color: var(--first-text-color);
 }
+
 /* ---------------footer----------------- */
 .footer-container {
   display: flex;
@@ -409,19 +474,18 @@ body {
   color: var(--secondary-text-color);
 }
 .footer-social-network-list {
-  display: inline-flex;
+  display: flex;
 }
-.footer-social-network-item {
-  width: 44px;
-  height: 44px;
+.footer-social-network-link {
   background-color: rgba(255, 255, 255, 0.1);
-  border-radius: 50%;
 }
 .footer-social-network-item:not(:last-child) {
   margin-right: 10px;
 }
-
-.footer-social-network-item:hover,
-.footer-social-network-item:focus {
+.footer-social-network-icon {
+  fill: var(--secondary-icon-color);
+}
+.footer-social-network-link:hover,
+.footer-social-network-link:focus {
   background-color: var(--accent-btn-background-color);
 }
